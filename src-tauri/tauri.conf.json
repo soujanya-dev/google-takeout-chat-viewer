@@ -1,0 +1,49 @@
+{
+  "build": {
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "google-takeout-chat-viewer",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "dialog": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "google-takeout-chat-viewer",
+        "width": 900,
+        "height": 800
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "dev.soujanya.google-takeout-chat-viewer",
+      "icon": [
+        "icons/32.png",
+        "icons/128.png",
+        "icons/256.png",
+        "icons/1024.icns",
+        "icons/1024.ico"
+      ]
+    }
+  }
+}

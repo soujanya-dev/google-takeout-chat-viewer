@@ -1,0 +1,797 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Universal
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Apply styling to all elements (including their `::before` and `::after`
+pseudo-elements). One common use of this selector is to apply a custom
+`box-sizing`. */
+*, *::before, *::after {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Root
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	overflow: hidden;
+	--bg-color: #ffffff;
+	--bg-secondary-color: #f3f3f6;
+	--color-primary: #396cd8;
+	--color-secondary: #396bd87f;
+	--color-lightGrey: #a6a6a6;
+	--color-grey: #747681;
+	--color-darkGrey: #3f4144;
+	--color-error: #d43939;
+	--color-error-light: #f8d7da;
+	--color-success: #28bd14;
+	--color-success-light: #d4edda;
+	--grid-maxWidth: 160rem;
+	--grid-gutter: 0rem;
+	--font-size: 1.6rem;
+	--font-color: #333333;
+	--font-family-sans: Inter, Avenir, Helvetica, Arial, sans-serif;
+	--font-family-mono: monaco, "Consolas", "Lucida Console", monospace;
+}
+html {}
+body {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Content sectioning
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+h1, h2, h3, h4, h5, h6 {}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+header {}
+
+nav {}
+nav ul, nav ol {}
+nav li {}
+nav a {}
+nav a:visited {}
+nav a:hover {}
+nav a:active {}
+
+main {}
+
+article {}
+
+section {}
+
+aside {}
+
+search {}
+
+footer {}
+
+address {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Text block content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Overall styling, e.g. vertical spacing */
+p, ol, ul, pre, blockquote, figure, hr, dl {
+	margin: 0;
+}
+
+p {}
+
+ol, ul {}
+ol {}
+ul {}
+li {}
+ol ol, ol ul, ul ul, ul ol {}
+li li {}
+
+pre {}
+pre code {}
+pre samp {}
+
+blockquote {}
+
+figure {}
+figcaption {}
+
+hr {}
+
+dl {}
+dt {}
+dd {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Inline text semantics
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+a {}
+a:visited {}
+a:hover {}
+a:active {}
+
+strong {}
+b {}
+
+em {}
+i {}
+
+q {}
+cite {}
+
+s {}
+
+mark {}
+
+/* If you specify a font size, consider using the `em` unit so that it works
+universally, e.g. for both `h1 small` and `p small` */
+small {}
+sub {}
+sup {}
+
+code {}
+
+dfn {}
+abbr {}
+abbr[title] {}
+
+var {}
+kbd {}
+kbd kbd {}
+samp {}
+
+u {}
+
+data {}
+time {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Demarcating edits
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+del {}
+ins {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Embedded content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+img {}
+svg {}
+video {}
+canvas {}
+audio {}
+object {}
+
+noscript {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Table content
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+table {}
+caption {}
+col:first-child {}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+th {}
+td {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Forms
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+fieldset {}
+fieldset:disabled {}
+legend {}
+
+form {}
+
+label {}
+
+::placeholder {}
+:focus::placeholder {}
+
+/* Overall styling, e.g. vertical spacing */
+input, textarea, select, button, .button, .input {
+	border-radius: 8px;
+	border: 1px solid transparent;
+	padding: 0.6em 1.2em;
+	font-size: 1em;
+	font-weight: 500;
+	font-family: inherit;
+	transition: border-color 0.25s;
+	outline: none;
+	background-color: transparent;
+	color: var(--font-color);
+	margin: 0;
+	line-height: 1.5;
+}
+
+/* `textarea` and `input` elements that share a similar look and similar styling
+capabilities */
+/* - common styling */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+.input{
+	cursor: text;
+}
+/* - individual styling */
+textarea {}
+input[type="text"] {}
+input[type="password"] {}
+input[type="email"] {}
+input[type="tel"] {}
+input[type="number"] {}
+input[type="search"] {}
+input[type="url"] {}
+input[type="date"] {}
+input[type="datetime-local"] {}
+input[type="month"] {}
+input[type="week"] {}
+input[type="time"] {}
+/* Tick boxes */
+input[type="checkbox"], input[type="radio"] {}
+input[type="checkbox"]:checked, input[type="radio"]:checked {}
+input[type="checkbox"] {}
+input[type="checkbox"]:checked {}
+input[type="radio"] {}
+input[type="radio"]:checked {}
+/* Other input fields, some with limited styling capabilities */
+input[type="file"] {}
+input[type="color"] {}
+input[type="range"] {}
+
+select {}
+optgroup {}
+option {}
+option:checked {}
+datalist {}
+
+button,
+input[type="submit"], .button {
+	outline: none;
+	cursor: pointer;
+}
+button:disabled,
+input[type="submit"]:disabled {}
+button.secondary {}
+button.secondary:disabled {}
+
+.input {
+	border-color: var(--color-grey);
+}
+
+.input:focus, .input:active, .input:hover, .input:focus-within{
+	border-color: var(--color-primary);
+}
+
+.input input {
+	border: none;
+	padding: 0;
+	background-color: var(--bg-secondary-color);
+	display:flex;
+}
+
+.input input.main {
+	width: 50%;
+}
+
+.input input:focus {
+	border: none;
+	box-shadow: none;
+}
+
+/* This matches forms or form elements that are invalid *and* have been
+interacted with. Note that:
+1) You may need to add the `interacted` class to forms yourself
+2) You may need to add the `touched` class to form fields yourself
+3) `:user-invalid` is a working draft and not yet supported by most browsers
+4) `:-moz-ui-invalid` is non-standard and only works in Firefox
+Form validation error messages will appear (in capable browsers) regardless of
+this styling. You can omit 1) and 2) and still have working forms. Perfect
+example of progressive enhancement. */
+/* Applies to invalid forms */
+form.interacted:invalid {}
+/* Applies to invalid form fields. You would need to repeat your declarations
+for the following three groups of selectors individually. Browsers completely
+ignore any rule that contains a selector they do not know. */
+form.interacted :invalid, form .touched:invalid {}
+:user-invalid {}
+:-moz-ui-invalid {}
+
+output {}
+
+progress {}
+meter {}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Interactive elements
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+details {}
+details[open] {}
+summary {}
+details[open] summary {}
+
+dialog {}
+dialog::backdrop {}
+
+/* Some form fields, `details`, elements with `tabindex`, and possibly other
+elements can be focussed. You should use `:focus-visible` instead of `:focus`
+whenever possible. As the former is not yet widely supported, you need to do it
+as follows:
+1) Set styling on focus
+2) If browser supports `:focus-visible`, revert/unset the styling from 1)
+3) If the element matches `:focus-visible`, apply the styling again */
+:focus {
+	border-color: var(--color-primary);
+}
+:focus:not(:focus-visible) {}
+:focus-visible {
+	border-color: var(--color-primary);
+}
+
+:hover {
+	border-color: var(--color-primary);
+}
+
+[inert], [inert] * {}
+
+[hidden] {
+	display: none !important;
+}
+
+
+/*
+  * Icon button
+  by default, hide the 2nd child
+  on hover, show the 2nd child and hide the 1st child 
+*/
+.icon-button {
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	font-size: var(--icon-button-font-size, 1.5em);
+}
+
+.icon-button > * {
+	position: absolute;
+	/* calculate top and left from font size as icons tends to center from 0,0 point */
+	top: calc(50% - var(--icon-button-font-size, 1.5em)/2);
+	left: calc(50% - var(--icon-button-font-size, 1.5em)/2);
+	/* top: 50%;
+	left: 50%; */
+}
+
+.icon-button > *:nth-child(2) {
+	display: none;
+}
+
+.icon-button:hover > *:nth-child(1) {
+	display: none;
+}
+
+.icon-button:hover > *:nth-child(2) {
+	display: block;
+}
+
+.icon-button:hover:disabled > *:nth-child(2) {
+	display: none !important;
+}
+
+.icon-button:disabled > *:nth-child(1) {
+	display: block !important;
+}
+
+/* Arc UI CSS */
+
+[data-scope="toast"][data-part="group"] li {
+	/* remove list numbers */
+	list-style-type: none;
+}
+
+[data-scope="toast"][data-part="root"] {
+	padding: 0.5em;
+}
+
+[data-scope="toast"][data-part="root"].error {
+	background-color: var(--color-error-light);
+	color: var(--color-error);
+}
+
+[data-scope="toast"][data-part="root"].success {
+	background-color: var(--color-success-light);
+	color: var(--color-success);
+}
+
+[data-scope="toast"][data-part="close-trigger"] {
+	/* position it on top right */
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.2em;
+	font-size: smaller;
+	border: none;
+	box-shadow: none;
+	background-color: transparent;
+	color: inherit;
+}
+
+[data-scope="toast"][data-part="close-trigger"]:hover,
+[data-scope="toast"][data-part="close-trigger"]:active {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+[data-scope="hover-card"][data-part="positioner"].min-width-override {
+	min-width: auto !important;
+}
+
+[data-scope="hover-card"][data-part="content"] {
+	padding: 1em;
+	border-radius: 0.5em;
+	width: 25em;
+	background: var(--bg-color);
+}
+
+[data-scope="splitter"][data-part="resize-trigger"] {
+	position: relative;
+	top: 35vh;
+	min-width: 0.3em;
+	background: grey;
+	padding: 0em;
+	margin: 0em;
+	height: 5em;
+}
+
+[data-scope="splitter"][data-part="panel"] {
+	background-color: #1c1c1c;
+	padding: 0em;
+}
+
+[data-scope="splitter"][data-part="root"] {
+	/* margin: 1em; */
+}
+
+[data-scope="tags-input"][data-part="item-preview"] {
+	border: 1px solid var(--color-grey);
+	border-radius: 0.5em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+[data-scope="tags-input"][data-part="item-preview"][data-highlighted]{
+	border: 1px solid var(--color-primary);
+}
+
+.chat-splitter-root-panel {
+	height: 76vh;
+	padding: 0.5em;
+}
+
+.chat-splitter-root-panel .multiline-header {
+	height: 70vh;
+}
+
+/* Wave animation */
+.wave-animation {
+	display: inline-block;
+	animation: wave 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.wave-animation {
+	/* Delay increases with each div index */
+	animation-delay: calc(0.15s * var(--wave-index));
+}
+
+/* Generic classes */
+
+.row-flex {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content:flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 0.5em;
+
+}
+
+
+.col-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content:flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	gap: 0.5em;
+}
+
+.left-aligned {
+	text-align: left;
+	align-items: start;
+}
+
+.center-aligned {
+	text-align: center;
+	align-items: center;
+}
+
+.center-aligned-self {
+	align-self: center;
+	text-align: center;
+}
+
+.right-aligned {
+	text-align: right;
+	align-items: end;
+}
+
+.scrollable {
+	overflow-y: auto;
+	justify-content: unset;
+}
+/* .scrollable > * {
+	margin-right: 3%;
+} */
+
+.not-centered {
+	justify-content: unset;
+	align-items: unset;
+	text-align: unset;
+}
+
+.selected {
+	border: 1px solid var(--color-primary);
+	border-radius: 0.5em;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.divider {
+	border-top: 1px solid var(--color-darkGrey);
+}
+
+.spacer {
+	margin: 0.5em;
+}
+
+.vertical-spacer {
+	margin: 0.5em 0;
+}
+
+.horizontal-spacer {
+	margin: 0 0.5em;
+}
+
+.primary-button {
+	color: var(--color-primary);
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.pos-relative {
+	position: relative;
+}
+
+.pos-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pos-right {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translateY(-50%);
+}
+
+.pos-left {
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	transform: translateY(-50%);
+}
+
+.user-name {
+	font-size: 1.2em;
+	font-weight: 600;
+	margin:0.2em;
+}
+
+.chat-message {
+	font-size: 1em;
+	font-weight: 400;
+	border: 1px solid transparent;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	margin: 0.2em;
+	text-align: left;
+	word-wrap: break-word;
+	width: fit-content;
+	max-width: 75%;
+	display: inline-block;
+	white-space: pre-wrap;
+}
+
+.search-results .chat-message {
+	max-width: 100%;
+}
+
+.search-results .chat-message:hover {
+	border: 1px solid var(--color-primary);
+}
+
+.left-aligned .chat-message {
+	border-color: var(--color-darkGrey);
+	text-align: left;
+}
+
+.left-aligned .chat-message.selected {
+	background-color: var(--color-darkGrey);
+}
+
+.right-aligned .chat-message {
+	border-color: var(--color-secondary)
+}
+
+.right-aligned .chat-message.selected {
+	background-color: var(--color-secondary);
+}
+
+.chat-date {
+	font-size: 0.7em;
+	font-weight: 300;
+	margin: 0.5em;
+	color: var(--color-lightGrey);
+}
+
+.chat-name {
+	margin: 0em;
+	padding:0.5em;
+	max-height: 3.5em;
+	word-wrap:break-word;
+	text-overflow: ellipsis;
+}
+
+.splitter-header {
+	box-shadow: 0 3px 5px 0 var(--color-darkGrey);
+}
+
+.button+.button {
+	margin: 0em;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Media queries
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@media (prefers-reduced-motion: reduce) {
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-color: #0f0f0f;
+		--bg-secondary-color: #1c1c1c;
+		--color-primary: #396cd8;
+		--color-secondary: #396bd87f;
+		--font-color: #f6f6f6;
+	}
+}
+
+@media (orientation: portrait) {
+}
+
+@media (orientation: landscape) {
+}
+
+@media print {
+}
+
+
+@media (min-height: 720px) {
+	.chat-splitter-root-panel {
+		height: calc(100vh - 10em);
+	}
+}
+
+
+
+.autocomplete-container {
+  position: relative; 
+}
+
+.autocomplete-results {
+  position: absolute; 
+  top: 100%; 
+  left: 0;
+  right: 0;
+  background-color: var(--bg-secondary-color);
+  border: 1px solid var(--color-grey);
+  display: none; 
+  z-index: 1;  
+  max-height: 20vh;
+  overflow-y: auto;
+}
+
+.autocomplete-results.show {
+  display: block; 
+}
+
+.autocomplete-results ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.autocomplete-results li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.autocomplete-results li:hover,
+.autocomplete-results li.highlighted {
+  border: 1px solid var(--color-primary);
+}
+
+
+/*
+This file evolved from Natural Selection:
+https://github.com/frontaid/natural-selection
+*/
