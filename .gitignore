@@ -1,2 +1,9 @@
-node_modules
 dist
+node_modules
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+yarn.lock
+package-lock.json
+bun.logb
+.DS_Store
