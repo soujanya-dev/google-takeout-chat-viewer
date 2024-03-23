@@ -44,7 +44,7 @@ Download the latest binary for your OS from release section.
 
 **Prerequisites**
 
-- Node.js and npm.
+- [Bun](https://bun.sh/).
 - Rust and Cargo.
 
 Follow these steps to manually install the Google Takeout Chat Viewer:
@@ -61,14 +61,14 @@ Follow these steps to manually install the Google Takeout Chat Viewer:
 
    ```bash
    cd google-takeout-chat-viewer
-   npm install
+   bun install
    ```
 
 3. **Build the application:**
 
 
    ```bash
-   npm run tauri build
+   bun run tauri build
    ```
 
 ## Usage
