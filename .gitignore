@@ -5,5 +5,5 @@ yarn-error.log
 yarn-debug.log
 yarn.lock
 package-lock.json
-bun.logb
+bun.lockb
 .DS_Store
