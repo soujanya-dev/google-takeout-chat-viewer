@@ -38,7 +38,7 @@ To make use of Google Takeout Chat Viewer, you first need to download your Googl
 
 ## Installation
 
-Download the latest binary for your OS from release section.
+Download the latest binary for your OS from the [release](https://github.com/soujanya-dev/google-takeout-chat-viewer/releases) section.
 
 ### Manual Installation
 
